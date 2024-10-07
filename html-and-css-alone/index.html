@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+        .my-table p {
+            margin: 0;
+        }
+        .my-caption {
+            display: block;
+            font-size: 2em;
+            text-align-last: center;
+
+        }
+        .mini-header {
+            background: rgba(28, 152, 156, 0.5);
+            font-size: 1.5em;
+            margin: 0;
+        }
+        .hku-aims, .outcomes {
+            background: rgba(79, 201, 201, 0.1);
+        }
+        .plo-a {
+            background-color: chartreuse;   
+        }
+        .plo-b {
+            background-color: gray;   
+        }
+        .plo-c {
+            background-color: coral;   
+        }
+        .plo-d {
+            background-color: brown;   
+        }
+        .plo-e {
+            background-color:hotpink;   
+        }
+        .plo-f {
+            background-color:chocolate ;   
+        }
+        .plo-g {
+            background-color:aqua;   
+        }
+        .plo-h {
+            background-color:green;   
+        }
+        .plo-i {
+            background-color:dodgerblue;   
+        }
+        .plo-j {
+            background-color:yellow;   
+        }
+
+        .plo-items:hover::after {
+            content: attr(data-1);
+            position: fixed;
+            transform: translateX(-50%);
+            background:rgb(255, 255, 255);
+            color: black;
+            border-radius: 5px;
+            border-style: solid;
+            border-color: black;
+            max-width: 100%;
+            white-space: normal;
+            font-size: small;
+        }
+        .plo-ad:hover::after {
+            left: 50%;
+            max-width: 30%;
+        }
+        .plo-dd:hover::after {
+            left: 45%;
+            max-width: 40%;
+        }
+        .plo-bc:hover::after {
+            left: 60%;
+        }
+        .plo-eh:hover::after {
+            left: 25%;
+            max-width: 25%;
+        }
+        .plo-ij:hover::after {
+            left: 50%;
+        }
+        .plo-jj:hover::after {
+            left: 65%;
+        }
+
+        @media screen and (min-width: 900px) {
+            #root {
+                max-width: 100%;
+            }
+            .mini-header  {
+                display: flex;
+                flex-direction: column;
+            }
+            .my-table > * {
+                min-height: 3em;
+            }
+
+            .mini-header1 {
+                float: right;
+                width: 84%;
+                align-self: flex-end;
+                text-align: center;
+                padding: 20px 0;
+
+            }
+            .mini-header2 {
+                float: left;
+                display: block;
+                width: 16%;
+                clear: both;
+                height: 6em;
+                padding: 20px 5px;
+            }
+
+            .hku-aims {
+                width: 84%;
+                display: flex;
+
+            }
+            .hku-aims > p {
+                width: 16.67%;
+                text-align: left;
+                min-height: 10em;
+                padding-top: 10px;
+                padding-left: 5px;
+                border-style: solid;
+                border-width: 0.01cap;
+                border-color: cadetblue;
+                font-size: 0.9em;
+            }
+            .outcomes {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+            .outcomes p {
+                border-style: solid;
+                border-width: 0.01cap;
+                border-color: cadetblue;
+                min-height: 2.5em;
+                padding-top: 10px;
+            }
+            .cell {
+                min-width: 14%;
+                background-color: white;
+                color:rgb(87, 87, 255);
+                text-shadow: blue 1px 0 5px;
+            }
+            .plo-items {
+                width: 16%;
+            }
+            .out-mob {
+                display: none;
+            }
+        
+            @media screen and (min-width: 1150px) {
+                #root {
+                    max-width: 90%;
+                }
+
+                @media screen and (min-width: 1250px) {
+                    #root {
+                        max-width: 80%;
+                    }
+                }
+            }
+
+        }
+        @media screen and (max-width: 899px) {
+            #root {
+                max-width: 100%;
+            }
+            .outcomes {
+                display: none;
+            }
+            .mini-header {
+                min-height: 5.5em;
+                display: flex;
+                border-style: solid;
+                border-color: rgba(95, 158, 160,0.5);
+                border-width: 0.01cap;
+                position: sticky;
+                top: 30px;
+            }
+            .hku-aims {
+                display: flex;
+                clear: both;
+                flex-wrap: wrap;
+                background-color: white;
+            }
+            .hku-aims > * {
+                width: 50%;
+                border-style: solid;
+                border-color: cadetblue;
+                border-width: 0.01cap;
+            }
+            .hku-aims p {
+                font-size: 1.3em;
+                padding: 10px;
+            }
+            .mini-header1 {
+                float: left;
+                width: 50%;
+                align-self: flex-start;
+                text-align: center;
+                padding: 20px 0;
+
+            }
+            .mini-header2 {
+                float: right;
+                display: block;
+                width: 50%;
+                padding: 20px 5px;
+            }
+            .out-mob {
+                display: flex;
+                padding: 10px;
+                text-align: center;
+            }
+            .mob-inside {
+                max-width: 150px;
+            }
+            .mob-inside * {
+                display: flex;
+                display: inline;
+                flex-wrap: wrap-reverse;
+                flex-direction: row;
+                justify-content: flex-end;
+                writing-mode: vertical-lr;
+                min-height: 4em;
+                min-width: 1.6em;
+                box-sizing: border-box;
+                margin: 0;
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div id="root">
+    <p class="my-caption">Relationship of BEng(CompSc) Programme Learning Outcomes to HKU Educational Aims</p>
+        <div class="my-table">
+            <p class="mini-header mini-header1">HKU Educational Aims</p>
+            <p class="mini-header mini-header2">Programme Learning Outcomes</p>
+            <div class="hku-aims">
+                <p>Pursuit of academic / professional excellence, critical intellectual enquiry and life-long learning</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a">PLO a</h4><h4 class="plo-b">PLO b</h4><h4 class="plo-c">PLO c</h4><h4 class="plo-d">PLO d</h4><h4 class="plo-e" style="visibility: hidden;" >PLO e</h4><h4 class="plo-f" style="visibility: hidden;" >PLO f</h4><h4 class="plo-g" style="visibility: hidden;" >PLO g</h4><h4 class="plo-h" style="visibility: hidden;" >PLO h</h4><h4 class="plo-i">PLO i</h4><h4 class="plo-j">PLO j</h4></span></span>
+                <p>Tackling novel situations and ill-defined problems</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a" style="visibility: hidden;" >PLO a</h4><h4 class="plo-b" style="visibility: hidden;" >PLO b</h4><h4 class="plo-c">PLO c</h4><h4 class="plo-d" style="visibility: hidden;" >PLO d</h4><h4 class="plo-e" style="visibility: hidden;" >PLO e</h4><h4 class="plo-f" style="visibility: hidden;" >PLO f</h4><h4 class="plo-g" style="visibility: hidden;" >PLO g</h4><h4 class="plo-h" style="visibility: hidden;" >PLO h</h4><h4 class="plo-i" style="visibility: hidden;" >PLO i</h4><h4 class="plo-j">PLO j</h4></span></span>
+                <p>Critical self-reflection, greater understanding of others, and upholding personal and professional ethics</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a" style="visibility: hidden;" >PLO a</h4><h4 class="plo-b" style="visibility: hidden;" >PLO b</h4><h4 class="plo-c" style="visibility: hidden;" >PLO c</h4><h4 class="plo-d" style="visibility: hidden;" >PLO d</h4><h4 class="plo-e" style="visibility: hidden;" >PLO e</h4><h4 class="plo-f">PLO f</h4><h4 class="plo-g" style="visibility: hidden;" >PLO g</h4><h4 class="plo-h">PLO h</h4><h4 class="plo-i" style="visibility: hidden;" >PLO i</h4><h4 class="plo-j" style="visibility: hidden;" >PLO j</h4></span></span>
+                <p>Intercultural understanding and global citizenship</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a" style="visibility: hidden;" >PLO a</h4><h4 class="plo-b" style="visibility: hidden;" >PLO b</h4><h4 class="plo-c" style="visibility: hidden;" >PLO c</h4><h4 class="plo-d" style="visibility: hidden;" >PLO d</h4><h4 class="plo-e" style="visibility: hidden;" >PLO e</h4><h4 class="plo-f">PLO f</h4><h4 class="plo-g">PLO g</h4><h4 class="plo-h">PLO h</h4><h4 class="plo-i" style="visibility: hidden;" >PLO i</h4><h4 class="plo-j" style="visibility: hidden;" >PLO j</h4></span></span>
+                <p>Communication and collaboration</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a" style="visibility: hidden;" >PLO a</h4><h4 class="plo-b" style="visibility: hidden;" >PLO b</h4><h4 class="plo-c" style="visibility: hidden;" >PLO c</h4><h4 class="plo-d" style="visibility: hidden;" >PLO d</h4><h4 class="plo-e">PLO e</h4><h4 class="plo-f" style="visibility: hidden;" >PLO f</h4><h4 class="plo-g">PLO g</h4><h4 class="plo-h" style="visibility: hidden;" >PLO h</h4><h4 class="plo-i" style="visibility: hidden;" >PLO i</h4><h4 class="plo-j" style="visibility: hidden;" >PLO j</h4></span></span>
+                <p>Leadership and advocacy for the improvement of the human condition</p><span class="out-mob"><span class="mob-inside"><h4 class="plo-a" style="visibility: hidden;" >PLO a</h4><h4 class="plo-b" style="visibility: hidden;" >PLO b</h4><h4 class="plo-c" style="visibility: hidden;" >PLO c</h4><h4 class="plo-d">PLO d</h4><h4 class="plo-e">PLO e</h4><h4 class="plo-f" style="visibility: hidden;" >PLO f</h4><h4 class="plo-g" style="visibility: hidden;" >PLO g</h4><h4 class="plo-h">PLO h</h4><h4 class="plo-i" style="visibility: hidden;" >PLO i</h4><h4 class="plo-j" style="visibility: hidden;" >PLO j</h4></span></span>
+            </div>
+            <div class="outcomes">
+                <p class="plo-items plo-ad" data-1="apply knowledge of computing and mathematics appropriate to the programme outcomes and to the discipline">PLO a</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p>
+                <p class="plo-items plo-bc" data-1="apply knowledge of a computing specialization, and domain knowledge appropriate for the computing specialization to the abstraction and conceptualization of computing models">PLO b</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p>
+                <p class="plo-items plo-bc" data-1="analyze a problem, and identify and define the computing requirements appropriate to its solution">PLO c</p><p class="cell">&#10003;</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p>
+                <p class="plo-items plo-dd" data-1="design, implement, and evaluate a computer-based system, process, component, or program to meet desired needs with appropriate consideration for public health and safety, social and environmental considerations" >PLO d</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell">&#10003;</p>
+                <p class="plo-items plo-eh" data-1="function effectively on teams to accomplish a common goal">PLO e</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell">&#10003;</p><p class="cell">&#10003;</p>
+                <p class="plo-items plo-eh" data-1="demonstrate an understanding of professional, ethical, legal, security and social issues and responsibilities">PLO f</p><p class="cell"></p><p class="cell"></p><p class="cell">&#10003;</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p>
+                <p class="plo-items plo-eh" data-1="communicate effectively with a range of audiences">PLO g</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell">&#10003;</p><p class="cell">&#10003;</p><p class="cell"></p>
+                <p class="plo-items plo-eh" data-1="analyze the local and global impact of computing on individuals, organizations, and society">PLO h</p><p class="cell"></p><p class="cell"></p><p class="cell">&#10003;</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell">&#10003;</p>
+                <p class="plo-items plo-ij" data-1="recognize the need for and an ability to engage in continuing professional development">PLO i</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p>
+                <p class="plo-items plo-jj" data-1="use current techniques, skills, and tools necessary for computing practice with an understanding of the limitations.">PLO j</p><p class="cell">&#10003;</p><p class="cell">&#10003;</p><p class="cell"></p><p class="cell"></p><p class="cell"></p><p class="cell"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
