@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="main.js" defer></script>
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Hong Kong International Airport</h1>
+        <h1>Flight Information</h1>
+    </div>
+    <div class="date-render">
+        <p id="date-render"></p>
+    </div>
+
+    <div class="main">
+        <div class="navs">
+            <span>
+                <span id="departure">Departure</span>
+                <label class="switch">
+                    <input type="checkbox" id="flight-toggle">
+                    <span class="slider round"></span>
+                </label>
+                <span id="arrival">Arrival</span>
+            </span>
+            <button id="reload">Reload</button>
+        </div>
+
+        <div class="search">
+            <input id="search-text">
+            <button id="btn-search">Search</button>
+            <button id="btn-reset">Reset</button>
+        </div>
+
+        <div class="mini-header">
+            <span id="mini-header"></span><span id="mh-info"></span>
+        </div>
+        <div class="fl-container">
+            <div id="flight-content" class="flight-content"></div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
