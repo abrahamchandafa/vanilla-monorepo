@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tictactoe.css">
+    <script src="tictactoe.js" defer></script>
+    <title>Assignment 3</title>
+</head>
+<body>
+    <div class="side">
+        <div class="box nought">
+            <img id="nought" src="Nought.png" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div class="box cross">
+            <img id="cross" src="Cross.png" draggable="true" ondragstart="drag(event)">
+        </div>
+    </div>
+    <div class="main">
+        <h1>Tic Tac Toe for Fun</h1>
+        <p><span>Score - O : </span><span id="o-score"></span><span>X : </span><span id="x-score"></span></p>
+        <div class="container">
+            <div class="box" id="box-1" data-index="0" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-2" data-index="1" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-3" data-index="2" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-4" data-index="3" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-5" data-index="4" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-6" data-index="5" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-7" data-index="6" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-8" data-index="7" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+            <div class="box" id="box-9" data-index="8" ondrop="dropHandler(event)" ondragover="allow(event)"></div>
+        </div>
+        <div id="game-over">
+
+        </div>
+    </div>
+    
+</body>
+</html>
